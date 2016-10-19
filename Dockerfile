@@ -14,6 +14,7 @@ RUN apt-get update && \
 # From Docker`s image Dockerfile
 # https://github.com/docker-library/docker/blob/a7fc73eef011c47cc2518149bc77a4b9bc7f9f41/1.12/Dockerfile
 COPY docker-entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # Comands from docker-compose official instruction
 # https://docs.docker.com/compose/install/
@@ -22,5 +23,5 @@ RUN apt-get install curl -y && \
 	chmod +x /usr/local/bin/docker-compose && \
 	docker-compose --version
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["sh"]
