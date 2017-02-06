@@ -10,4 +10,4 @@ apt-get install docker-engine -y &&
 docker -v &&
 
 echo "" && 
-echo "add current user to docker group: usermod -a -G docker ${USER}"
+echo "add current user to docker group: sudo usermod -a -G docker USERNAME"
