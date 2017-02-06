@@ -7,4 +7,7 @@ echo "deb https://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/sour
 apt-get update && 
 apt-cache policy docker-engine && 
 apt-get install docker-engine -y &&
-docker -v
+docker -v &&
+
+echo "" && 
+echo "add current user to docker group: usermod -a -G docker ${USER}"
