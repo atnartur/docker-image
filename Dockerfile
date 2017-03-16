@@ -8,7 +8,7 @@ RUN apt-get update && \
 	echo "deb https://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/sources.list.d/docker.list && \
 	apt-get update && \
 	apt-cache policy docker-engine && \
-	apt-get install docker-engine -y && \
+	apt-get install docker-engine=1.12.2-0~jessie -y && \
 	docker -v
 
 # From Docker`s image Dockerfile
