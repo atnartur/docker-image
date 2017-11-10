@@ -10,6 +10,3 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 ADD docker-compose-install.sh .
 RUN ./docker-compose-install.sh
-
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-CMD ["sh"]
